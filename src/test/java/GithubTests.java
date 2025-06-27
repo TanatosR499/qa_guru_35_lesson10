@@ -1,7 +1,4 @@
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.SearchPage;
@@ -14,11 +11,6 @@ public class GithubTests extends BaseTest {
 
     SearchPage searchPage = new SearchPage();
     GitHubSearchSteps step = new GitHubSearchSteps(searchPage);
-
-    @BeforeEach
-    void setUpLogger() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-    }
 
     @Test
     @DisplayName("Проверка табика issue на проекте allure - тест с лямбда")
