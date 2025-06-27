@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Fri Jun 27 08:56:34 GMT 2025","Fri Jun 27 08:56:48 GMT 2025","13620","","GithubTests","","GithubTests","checkProjectsTabTest","Проверка табика projects на своём проекте qa_quru35_lesson9 - тест с аннотацией Step",""
+"passed","Fri Jun 27 08:56:48 GMT 2025","Fri Jun 27 08:56:56 GMT 2025","7781","","GithubTests","","GithubTests","CheckIssueTabTest","Проверка табика issue на проекте allure - тест с лямбда",""
