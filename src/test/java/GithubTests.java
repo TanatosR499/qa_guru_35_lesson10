@@ -14,7 +14,7 @@ public class GithubTests extends BaseTest {
 
     @Test
     @DisplayName("Проверка табика issue на проекте allure - тест с лямбда")
-    void CheckIssueTabTest() {
+    void checkIssueTabTest() {
         step("Открываем главную страницу", () -> {
             open("");
         });
@@ -38,6 +38,16 @@ public class GithubTests extends BaseTest {
         step.searchByLettersAndSubmit("qa_quru35_lesson9");
         step.goByLink(searchPage.getQaGuru35Lesson9Link());
         step.checkElementExists(searchPage.getProjectsTab());
+    }
+
+    @Test
+    @DisplayName("Проверка табика issue на проекте allure с простыми шагами селенид")
+    void checkSimpleSeleniedStepsTest(){
+        open("");
+        searchPage.getButtonSearch().click();
+        searchPage.getSearchInput().setValue("allure").submit();
+        searchPage.getAllureJavaHref().click();
+        searchPage.getIssuesTab().should(Condition.exist);
     }
 
 }
