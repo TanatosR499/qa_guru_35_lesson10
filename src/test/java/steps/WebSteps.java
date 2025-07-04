@@ -7,11 +7,11 @@ import pages.SearchPage;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class GitHubSearchSteps {
+public class WebSteps {
 
     SearchPage page;
 
-    public GitHubSearchSteps(SearchPage page) {
+    public WebSteps(SearchPage page) {
         this.page = page;
     }
 

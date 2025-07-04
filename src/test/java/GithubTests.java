@@ -2,7 +2,7 @@ import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.SearchPage;
-import steps.GitHubSearchSteps;
+import steps.WebSteps;
 
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
@@ -10,7 +10,6 @@ import static io.qameta.allure.Allure.step;
 public class GithubTests extends BaseTest {
 
     SearchPage searchPage = new SearchPage();
-    GitHubSearchSteps step = new GitHubSearchSteps(searchPage);
 
     @Test
     @DisplayName("Проверка табика issue на проекте allure - тест с лямбда")
@@ -32,11 +31,12 @@ public class GithubTests extends BaseTest {
 
 
     @Test
-    @DisplayName("Проверка табика projects на своём проекте qa_quru35_lesson9 - тест с аннотацией Step")
+    @DisplayName("Проверка табика projects на проекте allurе - тест с аннотацией Step")
     void checkProjectsTabTest() {
+        WebSteps step = new WebSteps(searchPage);
         step.openGithub();
-        step.searchByLettersAndSubmit("qa_quru35_lesson9");
-        step.goByLink(searchPage.getQaGuru35Lesson9Link());
+        step.searchByLettersAndSubmit("allure");
+        step.goByLink(searchPage.getAllureJavaHref());
         step.checkElementExists(searchPage.getProjectsTab());
     }
 
